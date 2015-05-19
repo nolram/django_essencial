@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="3eef5347-9d8b-4437-988a-4b81ed661e6d">
+      <user-name>marlon</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <schema-pattern>scrum.pg_catalog scrum.public</schema-pattern>
+      <default-schemas>scrum.pg_catalog scrum.public</default-schemas>
+    </data-source>
+  </component>
+</project>
