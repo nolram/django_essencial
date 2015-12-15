@@ -1,7 +1,7 @@
-__author__ = 'marlon'
 from rest_framework.routers import DefaultRouter
 
-from . import views, models
+from . import views
+
 
 router = DefaultRouter()
 router.register(r'sprints', views.SprintViewSet)

@@ -1,9 +1,8 @@
-__author__ = 'marlon'
 import django_filters
 
 from django.contrib.auth import get_user_model
 
-from .models import Task,Sprint
+from .models import Task, Sprint
 
 User = get_user_model()
 
@@ -24,7 +23,7 @@ class TaskFilter(django_filters.FilterSet):
 
     class Meta:
         model = Task
-        fields = ('sprint', 'status', 'assigned',)
+        fields = ('sprint', 'status', 'assigned', 'backlog', )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

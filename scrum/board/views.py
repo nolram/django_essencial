@@ -38,7 +38,6 @@ class SprintViewSet(viewsets.ModelViewSet):
     """
     Endpoint da API para listar e criar sprints.
     """
-
     queryset = Sprint.objects.order_by('end')
     serializer_class = SprintSerializer
     filter_class = SprintFilter
@@ -52,9 +51,9 @@ class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    filter_backends = TaskFilter
-    search_fields = ('name', 'description',)
-    ordering_fields = ('name', 'order', 'started', 'due', 'completed',)
+    filter_class = TaskFilter
+    search_fields = ('name', 'description', )
+    ordering_fields = ('name', 'order', 'started', 'due', 'completed', )
 
 
 class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
@@ -65,4 +64,4 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
     lookup_url_kwarg = User.USERNAME_FIELD
     queryset = User.objects.order_by(User.USERNAME_FIELD)
     serializer_class = UserSerializer
-    search_fields = (User.USERNAME_FIELD)
+    search_fields = (User.USERNAME_FIELD, )
